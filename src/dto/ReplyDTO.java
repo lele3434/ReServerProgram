@@ -4,18 +4,24 @@ import java.sql.Date;
 
 public class ReplyDTO {
 
-	private Long rno;
+	private Long no;
 	private String author;
 	private String content;
 	private String ip;
-	private Long bno;
+	private Long board_no;
 	private Date postdate;
 	
-	public Long getRno() {
-		return rno;
+	public Long getNo() {
+		return no;
 	}
-	public void setRno(Long rno) {
-		this.rno = rno;
+	public void setNo(Long no) {
+		this.no = no;
+	}
+	public Long getBoard_no() {
+		return board_no;
+	}
+	public void setBoard_no(Long board_no) {
+		this.board_no = board_no;
 	}
 	public String getAuthor() {
 		return author;
@@ -34,12 +40,6 @@ public class ReplyDTO {
 	}
 	public void setIp(String ip) {
 		this.ip = ip;
-	}
-	public Long getBno() {
-		return bno;
-	}
-	public void setBno(Long bno) {
-		this.bno = bno;
 	}
 	public Date getPostdate() {
 		return postdate;

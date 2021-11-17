@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class BoardDTO {
 
-	private Long bno;
+	private Long no;
 	private String author;
 	private String title;
 	private String content;
@@ -12,11 +12,12 @@ public class BoardDTO {
 	private String ip;
 	private Date postdate;
 	
-	public Long getBno() {
-		return bno;
+	
+	public Long getNo() {
+		return no;
 	}
-	public void setBno(Long bno) {
-		this.bno = bno;
+	public void setNo(Long no) {
+		this.no = no;
 	}
 	public String getAuthor() {
 		return author;
