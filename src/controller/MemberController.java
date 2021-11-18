@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import common.ModelAndView;
-import model.BoardService;
+import service.MemberService;
 
 @WebServlet("*.do")
 
-public class BoardController extends HttpServlet {
+public class MemberController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    public BoardController() {
+    public MemberController() {
         super();
     }
 
@@ -29,9 +29,11 @@ public class BoardController extends HttpServlet {
 		String command = requestURI.substring(contextPath.length() + 1);	/* student/list.do	*/
 		
 		ModelAndView mav = null;
-		BoardService Service = null;
+		MemberService Service = null;
 		switch (command) {
-		
+		case "Boardlist.do":
+			mav = new ModelAndView("views/listBoard.jsp", false);
+			break;
 		}
 		
 		if (Service != null) {

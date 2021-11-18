@@ -1,7 +1,11 @@
 package dao;
 
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import dto.BoardDTO;
 import mybatis.config.DBService;
 
 public class BoardDao {
@@ -19,7 +23,12 @@ public class BoardDao {
 		}
 		return instance;
 	}
-	
+	public List<BoardDTO> selectBoardList() {
+		SqlSession ss = factory.openSession();
+		List<BoardDTO> list = ss.selectList("dao.boardDTO.selectBoardList");
+		ss.close();
+		return list;
+	}
 	
 	
 }
